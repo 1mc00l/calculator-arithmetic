@@ -2,8 +2,8 @@
 
 int main() {
 	char operator;	
-	int num1;
-	int num2;
+	int num1, num2;
+	float res;
 	
 	printf("(+, -, /)\n\n");
 	
@@ -15,8 +15,26 @@ int main() {
 	
 	printf("\nnumber 2: ");		
 	scanf("%d", &num2);
-
-	printf("%c, %d, %d", operator, num1, num2);	
+	
+	switch (operator)
+	{
+		case '+':
+			res = num1 + num2;
+			printf("\nAnswer: %.2f", res);
+			break;
+		case '-':
+			res = num1 - num2;
+			printf("\nAnswer: %.2f", res);
+			break;
+		case '*':
+			res = num1 * num2;
+			printf("\nAnswer: %.2f", res);
+			break;
+		case '/':
+			res = num1 / num2;
+			printf("\nAnswer: %.2f", res);
+			break;
+	}	
 	
 	return 0;
 }
