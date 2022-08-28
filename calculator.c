@@ -5,10 +5,15 @@ int main() {
 	int num1, num2;
 	float res;
 	
-	printf("(+, -, /)\n\n");
+	printf("(+, -, *, /)\n\n");
 	
 	printf("operator: ");	
 	scanf("%c", &operator);
+	
+	while(operator != '+' && operator != '-' && operator != '*' && operator != '/') {
+		printf("Wrong operator, try again: ");	
+		scanf(" %c", &operator);
+	}
 	
 	printf("\nnumber 1: ");	
 	scanf("%d", &num1);
